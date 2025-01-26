@@ -1,3 +1,7 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/NMeJa/keypirinha-powerswitch)
+![GitHub](https://img.shields.io/github/license/NMeJa/keypirinha-powerswitch)
+![GitHub all releases](https://img.shields.io/github/downloads/NMeJa/keypirinha-powerswitch/total)
+
 # PowerSwitch Plugin for Keypirinha
 
 A plugin for [Keypirinha](http://keypirinha.com) launcher to control Windows power states including sleep, hibernate, lock, restart, and shutdown.
@@ -87,7 +91,3 @@ Feel free to contribute to this project by:
 * The plugin creates a cache folder to store the PsShutdown64 executable
 * Actions are executed immediately without confirmation prompts
 * Make sure your work is saved before using shutdown or restart commands
-
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/YOUR-USERNAME/keypirinha-powerswitch)
-![GitHub](https://img.shields.io/github/license/YOUR-USERNAME/keypirinha-powerswitch)
-![GitHub all releases](https://img.shields.io/github/downloads/YOUR-USERNAME/keypirinha-powerswitch/total)
