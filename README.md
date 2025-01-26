@@ -1,70 +1,91 @@
-# Keypirinha Plugin: PowerSwitch
+# PowerSwitch Plugin for Keypirinha
 
-This is PowerSwitch, a plugin for the
-[Keypirinha](http://keypirinha.com) launcher.
+A plugin for [Keypirinha](http://keypirinha.com) launcher to control Windows power states including sleep, hibernate, lock, restart, and shutdown.
 
-**TODO:** write a brief description of this package. Optionally add a
-screenshot.
+## Features
 
+* 🔌 Shutdown Windows (bye-bye!)
+* 🔄 Restart Windows (turn it off and on again)
+* 😴 Put Windows to Sleep (nap time!)
+* ❄️ Hibernate Windows (deep sleep mode)
+* 🔒 Lock Windows (keep it safe)
+* ⚙️ Customizable aliases for each command
+* 🎨 Icon indicators for each action
 
-## Download
+## Dependencies
 
-**TODO:** indicate where the latest `.keypirinha-package` file can be
-downloaded. For example a URL to the `releases` list like:
-https://github.com/USERNAME/keypirinha-PACKAGE/releases
+This plugin uses PsShutdown64 from Windows Sysinternals Suite. The executable is included in the package.
 
+## Installation
 
-## Install
+### Automatic
+* Download the `PowerSwitch.keypirinha-package` from the releases
+* Install it in Keypirinha using:
+  * Drag and drop the package into Keypirinha
+  * Or move it to: `%APPDATA%\Keypirinha\InstalledPackages\`
 
-Once the `PowerSwitch.keypirinha-package` file is installed,
-move it to the `InstalledPackage` folder located at:
+### Manual
+1. Create a new folder `PowerSwitch` in `%APPDATA%\Keypirinha\Packages`
+2. Copy all files from this repository into the new folder
+3. Restart Keypirinha
 
-* `Keypirinha\portable\Profile\InstalledPackages` in **Portable mode**
-* **Or** `%APPDATA%\Keypirinha\InstalledPackages` in **Installed mode** (the
-  final path would look like
-  `C:\Users\%USERNAME%\AppData\Roaming\Keypirinha\InstalledPackages`)
+## Configuration
 
+The plugin can be configured by editing the `powerswitch.ini` file. You can access it through:
+* Keypirinha's configuration panel: `Keypirinha → Configure → Apps → PowerSwitch`
+* Or directly edit: `%APPDATA%\Keypirinha\Packages\PowerSwitch\powerswitch.ini`
+
+### Default Configuration
+```ini
+[powerswitch]
+# Command aliases (comma-separated)
+shutdown_aliases = shutdown, poweroff, off
+restart_aliases = restart, reboot
+sleep_aliases = sleep, suspend
+hibernate_aliases = hibernate, hiber
+lock_aliases = lock, lockpc
+```
 
 ## Usage
 
-**TODO:** list the items, if any, inserted to the Catalog by the plugin(s) of
-this package. Some plugins only make suggestions, in which case a description of
-what kind of suggestions are to be expected by the user may help.
+Type any of the configured aliases in Keypirinha to trigger the corresponding power action:
+* `shutdown` - Shutdown Windows
+* `restart` - Restart Windows
+* `sleep` - Put Windows to sleep
+* `hibernate` - Hibernate Windows
+* `lock` - Lock Windows
 
-
-## Change Log
-
-**TODO:** describe notable changes for each release. Below is a template for
-version 1.0.
-
-### v1.0
-
-* Added foo item
-* Fixed bug that was doing bad things when item "bar" was selected
-
-
-## License
-
-**TODO:** recommended section. Below is an example that goes with the default
-LICENSE file (MIT license). Do not forget to add your name in the `LICENSE`
-file!
-
-This package is distributed under the terms of the MIT license.
-
+Or use your custom aliases as configured in the .ini file.
 
 ## Credits
 
-**TODO:** optional section.
+* [Keypirinha](http://keypirinha.com/) by Jean-Charles Lefebvre
+* [PsShutdown](https://learn.microsoft.com/en-us/sysinternals/downloads/psshutdown) from Windows Sysinternals by Mark Russinovich
 
+## License
 
-## Contribute
+This package is distributed under the terms of the MIT license.
 
-**TODO:** optional section. Below is a template example, based on the one found
-in Keypirinha's Packages repository.
+## Version History
 
-1. Check for open issues or open a fresh issue to start a discussion around a
-   feature idea or a bug.
-2. Fork this repository on GitHub to start making your changes to the **dev**
-   branch.
-3. Send a pull request.
-4. Add yourself to the *Contributors* section below (or create it if needed)!
+### v1.0
+* Initial release
+* Basic power management commands
+* Customizable aliases
+* Included PsShutdown64 utility
+
+## Contributing
+
+Feel free to contribute to this project by:
+* Reporting bugs
+* Suggesting enhancements
+* Creating pull requests
+
+## Notes
+
+* Some commands may require administrative privileges
+* The plugin creates a cache folder to store the PsShutdown64 executable
+* Actions are executed immediately without confirmation prompts
+* Make sure your work is saved before using shutdown or restart commands
+
+Would you like me to add or modify anything in the README?
