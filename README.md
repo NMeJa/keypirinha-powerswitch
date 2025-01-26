@@ -88,4 +88,6 @@ Feel free to contribute to this project by:
 * Actions are executed immediately without confirmation prompts
 * Make sure your work is saved before using shutdown or restart commands
 
-Would you like me to add or modify anything in the README?
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/YOUR-USERNAME/keypirinha-powerswitch)
+![GitHub](https://img.shields.io/github/license/YOUR-USERNAME/keypirinha-powerswitch)
+![GitHub all releases](https://img.shields.io/github/downloads/YOUR-USERNAME/keypirinha-powerswitch/total)
